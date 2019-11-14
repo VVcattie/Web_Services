@@ -131,6 +131,14 @@
     		var javascript_time = new Date(unix_time * 1000);//Convert the unix time stamp to javascript
     		console.log(javascript_time);
     		console.log(javascript_time.getDay());
+	if(data.currently.temperature>=85)
+        {
+          document.getElementById("thermometer_inner").style.background="red";
+        }
+        else if(data.currently.temperature<=65)
+        {
+          document.getElementById("thermometer_inner").style.background="blue";
+        }
         document.getElementById("image_today").src ="img/"+ data.currently.icon+".png";
         document.getElementById("icon_today").innerHTML= data.currently.icon;
         document.getElementById("temp_today").innerHTML=data.currently.temperature;
